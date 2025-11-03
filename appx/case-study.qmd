@@ -2,4 +2,6 @@
 title: "Case Study"
 ---
 
-Your case study go here.
+The report chooses a very fascinating topic: Where slang comes from. It is attractive as it reflects how language constantly evolves with culture and social media. New slang terms spread quickly online, helping people express identity, humor, and belonging in creative ways.
+
+The visualizations made in this report are worth digging and learnable. For example, the first visualization uses a multi-line time series plot structure. The design effectively shows rise-and-fall trends of multiple slang terms simultaneously. And the use of different colors and word labels helps readers follow individual trends visually. You can click the filter words to check how their trends changed on the plot accordingly. This is a clear first step that they filter all the interesting slang words. The next step is to create heat maps and small multiple structures to show geographic and temporal variation in search interest for each slang word. Some slangs are popular in specific states, these terms more or less stem from local events or the influence of viral celebrities. The whole report is clearly organized, with three big catalysts part: Hip hop with slang as the title, Politics, and Internets. The authors also point out the limitation of the research, they honestly state they were unable to find the causes for the popularity of three words.
