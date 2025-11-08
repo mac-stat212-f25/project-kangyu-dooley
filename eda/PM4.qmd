@@ -1,0 +1,18 @@
+---
+title: "EDA"
+author: "Kangyu Li"
+---
+
+```{r}
+install.packages("DataExplorer")
+```
+```{r}
+library(readr)
+atp_tennis <- read_csv("../project/atp_tennis.csv")
+```
+```{r}
+library(DataExplorer)
+create_report(atp_tennis)
+```
+
+> The ATP dataset is exceptionally clean and well-structured, comprising 66,613 match records across 17 variables without any missing values, which ensures robust downstream analysis. Categorical variables like Tournament, Player_1/2, and Score exhibit high cardinality, so they’re best encoded carefully or excluded from certain models. Key distributions reveal that most matches are best-of-3 played outdoors on hard courts in ATP250 and Grand Slam events, while Masters and finals (best-of-5) are less frequent. Correlation and PCA diagnostics highlight strong within-feature coherence and various positive/negative associations between performance metrics (Pts_1, Pts_2) and betting odds (Odd_1, Odd_2), suggesting these numerical features capture complementary aspects of match competitiveness. Overall, the dataset’s completeness and varied feature types make it ideal for predictive modeling of match outcomes, ranking impact studies, or betting odds analysis.
