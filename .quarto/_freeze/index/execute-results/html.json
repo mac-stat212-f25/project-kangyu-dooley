@@ -1,0 +1,15 @@
+{
+  "hash": "0a2aa0deb8fd60a4a30a3251d4a26ad1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Report\"\n---\n\nYour report goes here.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# a test code chunk\n```\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

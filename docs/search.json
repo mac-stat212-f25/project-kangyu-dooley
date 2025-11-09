@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project Title",
+    "section": "",
+    "text": "Your report goes here.\n\n\nCode\n# a test code chunk",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Report</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member1.html",
+    "href": "eda/eda-member1.html",
+    "title": "Member 1 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Member 1 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member2.html",
+    "href": "eda/eda-member2.html",
+    "title": "Member 2 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Member 2 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member3.html",
+    "href": "eda/eda-member3.html",
+    "title": "Member 3 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Member 3 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html",
+    "href": "appx/proposal.html",
+    "title": "Appendix A — Proposal",
+    "section": "",
+    "text": "Code\nlibrary(knitr)\n\n\nProject Proposal: Analyzing the Evolution of Men’s Professional Tennis (2000-2023)\nTeam Members: Dooley Kim, Kangyu Li\nShort Project Description\nThis project aims to perform a comprehensive data analysis of the Association of Tennis Professionals(https://www.atptour.com/en/corporate/about) Tour match results spanning over two decades (2000–2023). Our analysis will focus on how performance metrics have shifted, what factors contribute most significantly to match victory across different court surfaces, and the feasibility of building predictive models for match outcomes.\nResearch Questions (2-3 Broad Questions) How have crucial match stats evolved across different court surfaces between the pre-2010 and post-2010 era?\nWhat are the most significant predictors of a match victory, and do they vary between major tournaments and standard tour events?\nCan a machine learning model reliably predict the winner of an ATP match with a high degree of accuracy?\nReasons and Inspirations The inspiration for this project stems from a shared interest in sports analytics. The dataset provides a unique opportunity to study a long-term, high-quality athletic phenomenon. We aim to move beyond simple win-loss records to understand the underlying statistical mechanics that drive success in modern professional tennis, making the analysis relevant to both sports enthusiasts and data science practitioners.\nProject Implementation Milestone 3 We will work together on studying and evaluating our case study\nMilestone 4 We will each do our own analysis and when finished, meet up to compare what we have found\nMilestone 5 Findings will be divided equally among the group members and each member will be responsible for presenting their share of the findings.\nMilestone 6 Different graphs annd parts of the datastory will be divided amoungst the group members equally. Each person will be responsible for their section and reviewing another member’s section.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html",
+    "href": "appx/case-study.html",
+    "title": "Appendix B — Case Study",
+    "section": "",
+    "text": "The report chooses a very fascinating topic: Where slang comes from. It is attractive as it reflects how language constantly evolves with culture and social media. New slang terms spread quickly online, helping people express identity, humor, and belonging in creative ways.\nThe visualizations made in this report are worth digging and learnable. For example, the first visualization uses a multi-line time series plot structure. The design effectively shows rise-and-fall trends of multiple slang terms simultaneously. And the use of different colors and word labels helps readers follow individual trends visually. You can click the filter words to check how their trends changed on the plot accordingly. This is a clear first step that they filter all the interesting slang words. The next step is to create heat maps and small multiple structures to show geographic and temporal variation in search interest for each slang word. Some slangs are popular in specific states, these terms more or less stem from local events or the influence of viral celebrities. The whole report is clearly organized, with three big catalysts part: Hip hop with slang as the title, Politics, and Internets. The authors also point out the limitation of the research, they honestly state they were unable to find the causes for the popularity of three words.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member1.html",
+    "href": "wa/wa-member1.html",
+    "title": "Appendix C — Member 1 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Member 1 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member2.html",
+    "href": "wa/wa-member2.html",
+    "title": "Appendix D — Member 2 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Member 2 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member3.html",
+    "href": "wa/wa-member3.html",
+    "title": "Appendix E — Member 3 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Member 3 First Name & Last Name Initial</span>"
+    ]
+  }
+]

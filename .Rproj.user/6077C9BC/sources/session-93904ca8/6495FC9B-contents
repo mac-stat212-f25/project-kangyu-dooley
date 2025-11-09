@@ -1,0 +1,24 @@
+---
+title: "Case Study"
+---
+
+Kangyu Li
+Mon, Nov 3, 8:24 PM (5 days ago)
+to me
+
+Source:  https://pudding.cool/2017/02/new-slang/
+
+
+
+Introduction: 
+
+
+
+This case study explores the origins and spread of slang, examining how language dynamically evolves through cultural influences like hip-hop, politics, and the internet. Using interactive visualizations and geographic analysis, it traces the rise and fall of popular slang terms, revealing how digital platforms and regional trends shape the way we communicate.
+
+
+
+The report chooses a very fascinating topic: Where slang comes from. It is attractive as it reflects how language constantly evolves with culture and social media. New slang terms spread quickly online, helping people express identity, humor, and belonging in creative ways.
+
+The visualizations made in this report are worth digging and learnable. For example, the first visualization uses a multi-line time series plot structure. The design effectively shows rise-and-fall trends of multiple slang terms simultaneously. The use of distinct colors and clear word labels allows readers to easily follow individual trends. You can click the filter words to check how their trends changed on the plot accordingly. This is a clear first step that they filter all the interesting slang words. The next step is to create heat maps and small multiple structures to show geographic and temporal variation in search interest for each slang word. Some slangs are popular in specific states, these terms more or less stem from local events or the influence of viral celebrities. The whole report is clearly organized, with three big catalysts part: Hip hop with slang as the title, Politics, and Internets. By combining these effective visualization techniques: interactive line charts for temporal trends, heat maps for geographic context, the report successfully transforms raw search data into an insightful exploration of language evolution. The authors also point out the limitation of the research, they honestly state they were unable to find the causes for the popularity of three words.
+

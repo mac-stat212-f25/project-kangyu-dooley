@@ -1,0 +1,46 @@
+---
+title: "Proposal"
+---
+```{r}
+
+
+library(knitr)
+```
+
+
+**Project Proposal: Analyzing the Evolution of Men's Professional Tennis (2000-2023)**
+
+
+**Team Members**: Dooley Kim, Kangyu Li
+
+
+**Short Project Description**
+
+This project aims to perform a comprehensive data analysis of the Association of Tennis Professionals(https://www.atptour.com/en/corporate/about) Tour match results spanning over two decades (2000–2023). Our analysis will focus on how performance metrics have shifted, what factors contribute most significantly to match victory across different court surfaces, and the feasibility of building predictive models for match outcomes. 
+
+
+**Research Questions** (2-3 Broad Questions)
+How have crucial match stats evolved across different court surfaces between the pre-2010 and post-2010 era?
+
+What are the most significant predictors of a match victory, and do they vary between major tournaments and standard tour events?
+
+Can a machine learning model reliably predict the winner of an ATP match with a high degree of accuracy?
+
+
+**Reasons and Inspirations**
+The inspiration for this project stems from a shared interest in sports analytics. The dataset provides a unique opportunity to study a long-term, high-quality athletic phenomenon. We aim to move beyond simple win-loss records to understand the underlying statistical mechanics that drive success in modern professional tennis, making the analysis relevant to both sports enthusiasts and data science practitioners.
+
+**Project Implementation**
+Milestone 3
+We will work together on studying and evaluating our case study
+
+Milestone 4
+We will each do our own analysis and when finished, meet up to compare what we have found
+
+Milestone 5
+Findings will be divided equally among the group members and each member will be responsible for presenting their share of the findings.
+
+Milestone 6
+Different graphs annd parts of the datastory will be divided amoungst the group members equally. Each person will be responsible for their section and reviewing another member’s section.
+
+
