@@ -1,7 +1,0 @@
-{
-    "installOptions": {
-        "installFromRepository": true,
-        "libraryPath": "/Users/Dooley/Documents/GitHub/project-kangyu-dooley/renv/library/macos/R-4.5/aarch64-apple-darwin20",
-        "installDependencies": true
-    }
-}
