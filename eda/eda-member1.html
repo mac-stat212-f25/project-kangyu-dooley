@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Member 1 First Name &amp; Last Name Initial – Project Title</title>
+<title>Member 1 DK – Project Title</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -304,7 +304,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../eda/eda-member1.html">EDA</a></li><li class="breadcrumb-item"><a href="../eda/eda-member1.html"><span class="chapter-title">Member 1 First Name &amp; Last Name Initial</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../eda/eda-member1.html">EDA</a></li><li class="breadcrumb-item"><a href="../eda/eda-member1.html"><span class="chapter-title">Member 1 DK</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -356,7 +356,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../eda/eda-member1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Member 1 First Name &amp; Last Name Initial</span></a>
+  <a href="../eda/eda-member1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Member 1 DK</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -424,9 +424,9 @@ cookieconsent.run({
 <main class="content column-page-right" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../eda/eda-member1.html">EDA</a></li><li class="breadcrumb-item"><a href="../eda/eda-member1.html"><span class="chapter-title">Member 1 First Name &amp; Last Name Initial</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../eda/eda-member1.html">EDA</a></li><li class="breadcrumb-item"><a href="../eda/eda-member1.html"><span class="chapter-title">Member 1 DK</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Member 1 First Name &amp; Last Name Initial</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Member 1 DK</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -444,6 +444,240 @@ cookieconsent.run({
 
 
 <p>Your exploratory data analysis of the team datasets go here.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>atp_tennis_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/processed/atp_tennis.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(<span class="st">"tidymodels"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co"># 1. DATA PREPARATION, FEATURE ENGINEERING, AND MODEL SPECIFICATION (CONSOLIDATED)</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># Goal: Create the outcome and select non-obvious features (Points and Context)</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>atp_tennis <span class="ot">&lt;-</span> atp_tennis_raw <span class="sc">%&gt;%</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>  <span class="co"># Filter step added to include ONLY matches where Nadal R. is playing</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">filter</span>(Player_1 <span class="sc">==</span> <span class="st">"Nadal R."</span> <span class="sc">|</span> Player_2 <span class="sc">==</span> <span class="st">"Nadal R."</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="at">P1_Wins =</span> <span class="fu">ifelse</span>(Winner <span class="sc">==</span> Player_1, <span class="st">"Yes"</span>, <span class="st">"No"</span>) <span class="sc">%&gt;%</span> <span class="fu">factor</span>(<span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>))</span>
+<span id="cb2-13"><a href="#cb2-13"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>  <span class="co"># Filter out matches where we don't have basic data (using Pts_1 as a proxy)</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>  <span class="fu">filter</span>(Pts_1 <span class="sc">!=</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a>  <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>  <span class="co"># Select ONLY the non-obvious features as requested (Points and Context)</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>  <span class="fu">select</span>(</span>
+<span id="cb2-19"><a href="#cb2-19"></a>    P1_Wins,</span>
+<span id="cb2-20"><a href="#cb2-20"></a>    Surface, Round, Series, Court</span>
+<span id="cb2-21"><a href="#cb2-21"></a>  )</span>
+<span id="cb2-22"><a href="#cb2-22"></a></span>
+<span id="cb2-23"><a href="#cb2-23"></a><span class="co"># Define the LASSO model specification</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="co"># We use tune() to signal that the optimal penalty must be found later.</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>lasso_spec <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-26"><a href="#cb2-26"></a>  <span class="fu">set_mode</span>(<span class="st">"classification"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-27"><a href="#cb2-27"></a>  <span class="fu">set_engine</span>(<span class="st">"glmnet"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-28"><a href="#cb2-28"></a>  <span class="fu">set_args</span>(<span class="at">mixture =</span> <span class="dv">1</span>, <span class="at">penalty =</span> <span class="fu">tune</span>())</span>
+<span id="cb2-29"><a href="#cb2-29"></a></span>
+<span id="cb2-30"><a href="#cb2-30"></a></span>
+<span id="cb2-31"><a href="#cb2-31"></a><span class="co"># 2. RECIPE, WORKFLOW, TUNING GRID (CONSOLIDATED)</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="co"># Define the preprocessing steps</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: step_normalize is ESSENTIAL for LASSO</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a>variable_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(P1_Wins <span class="sc">~</span> ., <span class="at">data =</span> atp_tennis) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-35"><a href="#cb2-35"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb2-36"><a href="#cb2-36"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>())</span>
+<span id="cb2-37"><a href="#cb2-37"></a></span>
+<span id="cb2-38"><a href="#cb2-38"></a><span class="co"># Combine model and recipe into a workflow</span></span>
+<span id="cb2-39"><a href="#cb2-39"></a>lasso_workflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-40"><a href="#cb2-40"></a>  <span class="fu">add_recipe</span>(variable_recipe) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-41"><a href="#cb2-41"></a>  <span class="fu">add_model</span>(lasso_spec)</span>
+<span id="cb2-42"><a href="#cb2-42"></a></span>
+<span id="cb2-43"><a href="#cb2-43"></a><span class="co"># Set up tuning parameters: 20-fold CV and a grid of 20 penalty values</span></span>
+<span id="cb2-44"><a href="#cb2-44"></a><span class="fu">set.seed</span>(<span class="dv">253</span>)</span>
+<span id="cb2-45"><a href="#cb2-45"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: With a smaller, specialized dataset, you might want fewer folds or repeats.</span></span>
+<span id="cb2-46"><a href="#cb2-46"></a><span class="co"># We will keep v=20 for consistency but be aware it's taxing on small datasets.</span></span>
+<span id="cb2-47"><a href="#cb2-47"></a>cv_folds <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(atp_tennis, <span class="at">v =</span> <span class="dv">10</span>, <span class="at">strata =</span> P1_Wins)</span>
+<span id="cb2-48"><a href="#cb2-48"></a>lasso_grid <span class="ot">&lt;-</span> <span class="fu">grid_regular</span>(<span class="fu">penalty</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">0</span>)), <span class="at">levels =</span> <span class="dv">10</span>) </span>
+<span id="cb2-49"><a href="#cb2-49"></a></span>
+<span id="cb2-50"><a href="#cb2-50"></a><span class="co"># 3. CROSS-VALIDATION AND SELECTION (CONSOLIDATED)</span></span>
+<span id="cb2-51"><a href="#cb2-51"></a><span class="co"># Run the tuning process</span></span>
+<span id="cb2-52"><a href="#cb2-52"></a>lasso_models <span class="ot">&lt;-</span> lasso_workflow <span class="sc">%&gt;%</span> </span>
+<span id="cb2-53"><a href="#cb2-53"></a>  <span class="fu">tune_grid</span>(</span>
+<span id="cb2-54"><a href="#cb2-54"></a>    <span class="at">grid =</span> lasso_grid,</span>
+<span id="cb2-55"><a href="#cb2-55"></a>    <span class="at">resamples =</span> cv_folds,</span>
+<span id="cb2-56"><a href="#cb2-56"></a>    <span class="at">metrics =</span> <span class="fu">metric_set</span>(roc_auc) </span>
+<span id="cb2-57"><a href="#cb2-57"></a>  )</span>
+<span id="cb2-58"><a href="#cb2-58"></a></span>
+<span id="cb2-59"><a href="#cb2-59"></a><span class="co"># Select the best penalty and finalize</span></span>
+<span id="cb2-60"><a href="#cb2-60"></a>best_penalty <span class="ot">&lt;-</span> lasso_models <span class="sc">%&gt;%</span></span>
+<span id="cb2-61"><a href="#cb2-61"></a>  <span class="fu">select_best</span>(<span class="at">metric =</span> <span class="st">"roc_auc"</span>)</span>
+<span id="cb2-62"><a href="#cb2-62"></a></span>
+<span id="cb2-63"><a href="#cb2-63"></a>final_lasso_workflow <span class="ot">&lt;-</span> lasso_workflow <span class="sc">%&gt;%</span></span>
+<span id="cb2-64"><a href="#cb2-64"></a>  <span class="fu">finalize_workflow</span>(best_penalty)</span>
+<span id="cb2-65"><a href="#cb2-65"></a></span>
+<span id="cb2-66"><a href="#cb2-66"></a><span class="co"># Output Results</span></span>
+<span id="cb2-67"><a href="#cb2-67"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Tuning Complete ---</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+
+--- Tuning Complete ---</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">cat</span>(<span class="st">"The optimal penalty parameter (lambda) that maximizes the ROC AUC is:</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The optimal penalty parameter (lambda) that maximizes the ROC AUC is:</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">print</span>(best_penalty)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  penalty .config         
+    &lt;dbl&gt; &lt;chr&gt;           
+1  0.0774 pre0_mod08_post0</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Final Workflow Ready ---</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+
+--- Final Workflow Ready ---</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">library</span>(<span class="st">"tidymodels"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co"># Load required library for broom's tidy() on glmnet models</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="fu">library</span>(<span class="st">"glmnet"</span>) </span>
+<span id="cb10-5"><a href="#cb10-5"></a></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="co"># --- ASSUMPTION ---</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="co"># This script assumes that 'atp_tennis' data, 'lasso_workflow', and 'best_penalty'</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="co"># have been successfully created by the 'lasso_tuning.R' script.</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a></span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="co"># --- 1. Finalize Workflow with the Best Penalty ---</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="co"># This replaces 'penalty = tune()' with the optimal value found during tuning.</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>final_lasso_workflow <span class="ot">&lt;-</span> lasso_workflow <span class="sc">%&gt;%</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a>  <span class="fu">finalize_workflow</span>(best_penalty)</span>
+<span id="cb10-14"><a href="#cb10-14"></a></span>
+<span id="cb10-15"><a href="#cb10-15"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Fitting Final Model ---</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+
+--- Fitting Final Model ---</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># --- 2. Fit the Final Model to the Entire Dataset ---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="co"># This step trains the optimized LASSO model on the full preprocessed data.</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: This model relies ONLY on Player Points (Pts_1, Pts_2) and Match Context.</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>final_fit <span class="ot">&lt;-</span> <span class="fu">fit</span>(final_lasso_workflow, <span class="at">data =</span> atp_tennis)</span>
+<span id="cb12-5"><a href="#cb12-5"></a></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="co"># --- 3. Inspect Model Coefficients ---</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="co"># Use 'extract_fit_engine' to get the underlying glmnet object, </span></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="co"># and 'tidy' to see the coefficients at the chosen penalty level.</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a></span>
+<span id="cb12-10"><a href="#cb12-10"></a><span class="co"># 3a. Extract the underlying glmnet fit</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>glmnet_fit <span class="ot">&lt;-</span> final_fit <span class="sc">%&gt;%</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a>  <span class="fu">extract_fit_engine</span>()</span>
+<span id="cb12-13"><a href="#cb12-13"></a></span>
+<span id="cb12-14"><a href="#cb12-14"></a><span class="co"># 3b. Extract the specific penalty value</span></span>
+<span id="cb12-15"><a href="#cb12-15"></a>lambda_best <span class="ot">&lt;-</span> best_penalty<span class="sc">$</span>penalty</span>
+<span id="cb12-16"><a href="#cb12-16"></a></span>
+<span id="cb12-17"><a href="#cb12-17"></a><span class="co"># 3c. Print the model coefficients for the optimal lambda</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a><span class="co"># The tidy function shows which variables were kept and which were shrunk to 0.</span></span>
+<span id="cb12-19"><a href="#cb12-19"></a>model_coefficients <span class="ot">&lt;-</span> <span class="fu">tidy</span>(glmnet_fit, <span class="at">s =</span> lambda_best) <span class="sc">%&gt;%</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a>  <span class="co"># Filter out coefficients that were set exactly to zero by the LASSO penalty</span></span>
+<span id="cb12-21"><a href="#cb12-21"></a>  <span class="fu">filter</span>(estimate <span class="sc">!=</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(<span class="fu">abs</span>(estimate)))</span>
+<span id="cb12-23"><a href="#cb12-23"></a></span>
+<span id="cb12-24"><a href="#cb12-24"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Key Model Coefficients (Excluding Zeroed Variables) ---</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+
+--- Key Model Coefficients (Excluding Zeroed Variables) ---</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">print</span>(model_coefficients)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 506 × 5
+   term                  step estimate   lambda dev.ratio
+   &lt;chr&gt;                &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Series_International    40    0.510 0.000610   0.00898
+ 2 Series_International    39    0.506 0.000670   0.00897
+ 3 Series_International    38    0.501 0.000735   0.00895
+ 4 Series_International    37    0.497 0.000807   0.00894
+ 5 Series_International    36    0.493 0.000885   0.00893
+ 6 Series_International    35    0.491 0.000972   0.00891
+ 7 Series_International    34    0.488 0.00107    0.00890
+ 8 Series_International    33    0.485 0.00117    0.00889
+ 9 Series_International    32    0.481 0.00128    0.00888
+10 Series_International    31    0.478 0.00141    0.00886
+# ℹ 496 more rows</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Model Interpretation Notes ---</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+
+--- Model Interpretation Notes ---</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">cat</span>(<span class="st">"This model ignores Rank and Odds. Interpretation now centers on:</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>This model ignores Rank and Odds. Interpretation now centers on:</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">cat</span>(<span class="st">"1. Player Points (Pts_1, Pts_2): A higher Pts_1 estimate should positively impact P1's chances.</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>1. Player Points (Pts_1, Pts_2): A higher Pts_1 estimate should positively impact P1's chances.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">cat</span>(<span class="st">"2. Context: The coefficients for Surface, Round, Series, and Court show which specific match conditions favor P1.</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>2. Context: The coefficients for Surface, Round, Series, and Court show which specific match conditions favor P1.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">cat</span>(<span class="st">"Variables with positive coefficients increase the probability of Player 1 winning.</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Variables with positive coefficients increase the probability of Player 1 winning.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">cat</span>(<span class="st">"Variables not listed here were shrunk to zero by the LASSO penalty (lambda = "</span>, lambda_best, <span class="st">").</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Variables not listed here were shrunk to zero by the LASSO penalty (lambda =  0.07742637 ).</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>This is a dataset that all of the ATP Dataset. This provides a lot of information about all of the matches from the past 25 years. We decided to ask the question of what are the most important factors in a player winning a set. Do certain players always preform better on a certain tennis surface, or part of a tournament. Is there one specific person that always loses to one player more than normal. I have decided to use machine learning to help me evaluate this database. I used a lasso model, which will tell us the most important variables in finding whether there is a win or not. I decided to just focus on one player Rafael Nadal, because I think that it is a lot more readable. But One of the major takeaways that I have gained from this data analysis is that there is not a lot of an impact of the type of court or surface, but there is a bit of a correlation between the series. It appears Nadal preforms better in the international series compared to the Grand Slam Series. But I also see that this estimate is still too low to be able to draw meaningful conclusions from this analysis.</p>
+</blockquote>
 
 
 <!-- -->
@@ -930,11 +1164,142 @@ cookieconsent.run({
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Member 1 First Name &amp; Last Name Initial"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>Your exploratory data analysis of the team datasets go here.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1"></a><span class="co">---</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="an">title:</span><span class="co"> "Member 1 DK"</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a><span class="co">---</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a></span>
+<span id="cb28-5"><a href="#cb28-5"></a>Your exploratory data analysis of the team datasets go here.</span>
+<span id="cb28-8"><a href="#cb28-8"></a><span class="in">```{r}</span></span>
+<span id="cb28-9"><a href="#cb28-9"></a><span class="fu">library</span>(readr)</span>
+<span id="cb28-10"><a href="#cb28-10"></a>atp_tennis_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/processed/atp_tennis.csv"</span>)</span>
+<span id="cb28-11"><a href="#cb28-11"></a><span class="in">```</span></span>
+<span id="cb28-12"><a href="#cb28-12"></a></span>
+<span id="cb28-15"><a href="#cb28-15"></a><span class="in">```{r}</span></span>
+<span id="cb28-16"><a href="#cb28-16"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb28-17"><a href="#cb28-17"></a><span class="fu">library</span>(<span class="st">"tidymodels"</span>)</span>
+<span id="cb28-18"><a href="#cb28-18"></a></span>
+<span id="cb28-19"><a href="#cb28-19"></a></span>
+<span id="cb28-20"><a href="#cb28-20"></a></span>
+<span id="cb28-21"><a href="#cb28-21"></a><span class="co"># 1. DATA PREPARATION, FEATURE ENGINEERING, AND MODEL SPECIFICATION (CONSOLIDATED)</span></span>
+<span id="cb28-22"><a href="#cb28-22"></a><span class="co"># Goal: Create the outcome and select non-obvious features (Points and Context)</span></span>
+<span id="cb28-23"><a href="#cb28-23"></a>atp_tennis <span class="ot">&lt;-</span> atp_tennis_raw <span class="sc">%&gt;%</span></span>
+<span id="cb28-24"><a href="#cb28-24"></a>  <span class="co"># Filter step added to include ONLY matches where Nadal R. is playing</span></span>
+<span id="cb28-25"><a href="#cb28-25"></a>  <span class="fu">filter</span>(Player_1 <span class="sc">==</span> <span class="st">"Nadal R."</span> <span class="sc">|</span> Player_2 <span class="sc">==</span> <span class="st">"Nadal R."</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-26"><a href="#cb28-26"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb28-27"><a href="#cb28-27"></a>    <span class="at">P1_Wins =</span> <span class="fu">ifelse</span>(Winner <span class="sc">==</span> Player_1, <span class="st">"Yes"</span>, <span class="st">"No"</span>) <span class="sc">%&gt;%</span> <span class="fu">factor</span>(<span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>))</span>
+<span id="cb28-28"><a href="#cb28-28"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb28-29"><a href="#cb28-29"></a>  <span class="co"># Filter out matches where we don't have basic data (using Pts_1 as a proxy)</span></span>
+<span id="cb28-30"><a href="#cb28-30"></a>  <span class="fu">filter</span>(Pts_1 <span class="sc">!=</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-31"><a href="#cb28-31"></a>  <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb28-32"><a href="#cb28-32"></a>  <span class="co"># Select ONLY the non-obvious features as requested (Points and Context)</span></span>
+<span id="cb28-33"><a href="#cb28-33"></a>  <span class="fu">select</span>(</span>
+<span id="cb28-34"><a href="#cb28-34"></a>    P1_Wins,</span>
+<span id="cb28-35"><a href="#cb28-35"></a>    Surface, Round, Series, Court</span>
+<span id="cb28-36"><a href="#cb28-36"></a>  )</span>
+<span id="cb28-37"><a href="#cb28-37"></a></span>
+<span id="cb28-38"><a href="#cb28-38"></a><span class="co"># Define the LASSO model specification</span></span>
+<span id="cb28-39"><a href="#cb28-39"></a><span class="co"># We use tune() to signal that the optimal penalty must be found later.</span></span>
+<span id="cb28-40"><a href="#cb28-40"></a>lasso_spec <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb28-41"><a href="#cb28-41"></a>  <span class="fu">set_mode</span>(<span class="st">"classification"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb28-42"><a href="#cb28-42"></a>  <span class="fu">set_engine</span>(<span class="st">"glmnet"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb28-43"><a href="#cb28-43"></a>  <span class="fu">set_args</span>(<span class="at">mixture =</span> <span class="dv">1</span>, <span class="at">penalty =</span> <span class="fu">tune</span>())</span>
+<span id="cb28-44"><a href="#cb28-44"></a></span>
+<span id="cb28-45"><a href="#cb28-45"></a></span>
+<span id="cb28-46"><a href="#cb28-46"></a><span class="co"># 2. RECIPE, WORKFLOW, TUNING GRID (CONSOLIDATED)</span></span>
+<span id="cb28-47"><a href="#cb28-47"></a><span class="co"># Define the preprocessing steps</span></span>
+<span id="cb28-48"><a href="#cb28-48"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: step_normalize is ESSENTIAL for LASSO</span></span>
+<span id="cb28-49"><a href="#cb28-49"></a>variable_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(P1_Wins <span class="sc">~</span> ., <span class="at">data =</span> atp_tennis) <span class="sc">%&gt;%</span> </span>
+<span id="cb28-50"><a href="#cb28-50"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb28-51"><a href="#cb28-51"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>())</span>
+<span id="cb28-52"><a href="#cb28-52"></a></span>
+<span id="cb28-53"><a href="#cb28-53"></a><span class="co"># Combine model and recipe into a workflow</span></span>
+<span id="cb28-54"><a href="#cb28-54"></a>lasso_workflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb28-55"><a href="#cb28-55"></a>  <span class="fu">add_recipe</span>(variable_recipe) <span class="sc">%&gt;%</span> </span>
+<span id="cb28-56"><a href="#cb28-56"></a>  <span class="fu">add_model</span>(lasso_spec)</span>
+<span id="cb28-57"><a href="#cb28-57"></a></span>
+<span id="cb28-58"><a href="#cb28-58"></a><span class="co"># Set up tuning parameters: 20-fold CV and a grid of 20 penalty values</span></span>
+<span id="cb28-59"><a href="#cb28-59"></a><span class="fu">set.seed</span>(<span class="dv">253</span>)</span>
+<span id="cb28-60"><a href="#cb28-60"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: With a smaller, specialized dataset, you might want fewer folds or repeats.</span></span>
+<span id="cb28-61"><a href="#cb28-61"></a><span class="co"># We will keep v=20 for consistency but be aware it's taxing on small datasets.</span></span>
+<span id="cb28-62"><a href="#cb28-62"></a>cv_folds <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(atp_tennis, <span class="at">v =</span> <span class="dv">10</span>, <span class="at">strata =</span> P1_Wins)</span>
+<span id="cb28-63"><a href="#cb28-63"></a>lasso_grid <span class="ot">&lt;-</span> <span class="fu">grid_regular</span>(<span class="fu">penalty</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">0</span>)), <span class="at">levels =</span> <span class="dv">10</span>) </span>
+<span id="cb28-64"><a href="#cb28-64"></a></span>
+<span id="cb28-65"><a href="#cb28-65"></a><span class="co"># 3. CROSS-VALIDATION AND SELECTION (CONSOLIDATED)</span></span>
+<span id="cb28-66"><a href="#cb28-66"></a><span class="co"># Run the tuning process</span></span>
+<span id="cb28-67"><a href="#cb28-67"></a>lasso_models <span class="ot">&lt;-</span> lasso_workflow <span class="sc">%&gt;%</span> </span>
+<span id="cb28-68"><a href="#cb28-68"></a>  <span class="fu">tune_grid</span>(</span>
+<span id="cb28-69"><a href="#cb28-69"></a>    <span class="at">grid =</span> lasso_grid,</span>
+<span id="cb28-70"><a href="#cb28-70"></a>    <span class="at">resamples =</span> cv_folds,</span>
+<span id="cb28-71"><a href="#cb28-71"></a>    <span class="at">metrics =</span> <span class="fu">metric_set</span>(roc_auc) </span>
+<span id="cb28-72"><a href="#cb28-72"></a>  )</span>
+<span id="cb28-73"><a href="#cb28-73"></a></span>
+<span id="cb28-74"><a href="#cb28-74"></a><span class="co"># Select the best penalty and finalize</span></span>
+<span id="cb28-75"><a href="#cb28-75"></a>best_penalty <span class="ot">&lt;-</span> lasso_models <span class="sc">%&gt;%</span></span>
+<span id="cb28-76"><a href="#cb28-76"></a>  <span class="fu">select_best</span>(<span class="at">metric =</span> <span class="st">"roc_auc"</span>)</span>
+<span id="cb28-77"><a href="#cb28-77"></a></span>
+<span id="cb28-78"><a href="#cb28-78"></a>final_lasso_workflow <span class="ot">&lt;-</span> lasso_workflow <span class="sc">%&gt;%</span></span>
+<span id="cb28-79"><a href="#cb28-79"></a>  <span class="fu">finalize_workflow</span>(best_penalty)</span>
+<span id="cb28-80"><a href="#cb28-80"></a></span>
+<span id="cb28-81"><a href="#cb28-81"></a><span class="co"># Output Results</span></span>
+<span id="cb28-82"><a href="#cb28-82"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Tuning Complete ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-83"><a href="#cb28-83"></a><span class="fu">cat</span>(<span class="st">"The optimal penalty parameter (lambda) that maximizes the ROC AUC is:</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-84"><a href="#cb28-84"></a><span class="fu">print</span>(best_penalty)</span>
+<span id="cb28-85"><a href="#cb28-85"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Final Workflow Ready ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-86"><a href="#cb28-86"></a><span class="in">```</span></span>
+<span id="cb28-87"><a href="#cb28-87"></a></span>
+<span id="cb28-90"><a href="#cb28-90"></a><span class="in">```{r}</span></span>
+<span id="cb28-91"><a href="#cb28-91"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb28-92"><a href="#cb28-92"></a><span class="fu">library</span>(<span class="st">"tidymodels"</span>)</span>
+<span id="cb28-93"><a href="#cb28-93"></a><span class="co"># Load required library for broom's tidy() on glmnet models</span></span>
+<span id="cb28-94"><a href="#cb28-94"></a><span class="fu">library</span>(<span class="st">"glmnet"</span>) </span>
+<span id="cb28-95"><a href="#cb28-95"></a></span>
+<span id="cb28-96"><a href="#cb28-96"></a><span class="co"># --- ASSUMPTION ---</span></span>
+<span id="cb28-97"><a href="#cb28-97"></a><span class="co"># This script assumes that 'atp_tennis' data, 'lasso_workflow', and 'best_penalty'</span></span>
+<span id="cb28-98"><a href="#cb28-98"></a><span class="co"># have been successfully created by the 'lasso_tuning.R' script.</span></span>
+<span id="cb28-99"><a href="#cb28-99"></a></span>
+<span id="cb28-100"><a href="#cb28-100"></a><span class="co"># --- 1. Finalize Workflow with the Best Penalty ---</span></span>
+<span id="cb28-101"><a href="#cb28-101"></a><span class="co"># This replaces 'penalty = tune()' with the optimal value found during tuning.</span></span>
+<span id="cb28-102"><a href="#cb28-102"></a>final_lasso_workflow <span class="ot">&lt;-</span> lasso_workflow <span class="sc">%&gt;%</span></span>
+<span id="cb28-103"><a href="#cb28-103"></a>  <span class="fu">finalize_workflow</span>(best_penalty)</span>
+<span id="cb28-104"><a href="#cb28-104"></a></span>
+<span id="cb28-105"><a href="#cb28-105"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Fitting Final Model ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-106"><a href="#cb28-106"></a></span>
+<span id="cb28-107"><a href="#cb28-107"></a><span class="co"># --- 2. Fit the Final Model to the Entire Dataset ---</span></span>
+<span id="cb28-108"><a href="#cb28-108"></a><span class="co"># This step trains the optimized LASSO model on the full preprocessed data.</span></span>
+<span id="cb28-109"><a href="#cb28-109"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: This model relies ONLY on Player Points (Pts_1, Pts_2) and Match Context.</span></span>
+<span id="cb28-110"><a href="#cb28-110"></a>final_fit <span class="ot">&lt;-</span> <span class="fu">fit</span>(final_lasso_workflow, <span class="at">data =</span> atp_tennis)</span>
+<span id="cb28-111"><a href="#cb28-111"></a></span>
+<span id="cb28-112"><a href="#cb28-112"></a><span class="co"># --- 3. Inspect Model Coefficients ---</span></span>
+<span id="cb28-113"><a href="#cb28-113"></a><span class="co"># Use 'extract_fit_engine' to get the underlying glmnet object, </span></span>
+<span id="cb28-114"><a href="#cb28-114"></a><span class="co"># and 'tidy' to see the coefficients at the chosen penalty level.</span></span>
+<span id="cb28-115"><a href="#cb28-115"></a></span>
+<span id="cb28-116"><a href="#cb28-116"></a><span class="co"># 3a. Extract the underlying glmnet fit</span></span>
+<span id="cb28-117"><a href="#cb28-117"></a>glmnet_fit <span class="ot">&lt;-</span> final_fit <span class="sc">%&gt;%</span></span>
+<span id="cb28-118"><a href="#cb28-118"></a>  <span class="fu">extract_fit_engine</span>()</span>
+<span id="cb28-119"><a href="#cb28-119"></a></span>
+<span id="cb28-120"><a href="#cb28-120"></a><span class="co"># 3b. Extract the specific penalty value</span></span>
+<span id="cb28-121"><a href="#cb28-121"></a>lambda_best <span class="ot">&lt;-</span> best_penalty<span class="sc">$</span>penalty</span>
+<span id="cb28-122"><a href="#cb28-122"></a></span>
+<span id="cb28-123"><a href="#cb28-123"></a><span class="co"># 3c. Print the model coefficients for the optimal lambda</span></span>
+<span id="cb28-124"><a href="#cb28-124"></a><span class="co"># The tidy function shows which variables were kept and which were shrunk to 0.</span></span>
+<span id="cb28-125"><a href="#cb28-125"></a>model_coefficients <span class="ot">&lt;-</span> <span class="fu">tidy</span>(glmnet_fit, <span class="at">s =</span> lambda_best) <span class="sc">%&gt;%</span></span>
+<span id="cb28-126"><a href="#cb28-126"></a>  <span class="co"># Filter out coefficients that were set exactly to zero by the LASSO penalty</span></span>
+<span id="cb28-127"><a href="#cb28-127"></a>  <span class="fu">filter</span>(estimate <span class="sc">!=</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-128"><a href="#cb28-128"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(<span class="fu">abs</span>(estimate)))</span>
+<span id="cb28-129"><a href="#cb28-129"></a></span>
+<span id="cb28-130"><a href="#cb28-130"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Key Model Coefficients (Excluding Zeroed Variables) ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-131"><a href="#cb28-131"></a><span class="fu">print</span>(model_coefficients)</span>
+<span id="cb28-132"><a href="#cb28-132"></a></span>
+<span id="cb28-133"><a href="#cb28-133"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">--- Model Interpretation Notes ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-134"><a href="#cb28-134"></a><span class="fu">cat</span>(<span class="st">"This model ignores Rank and Odds. Interpretation now centers on:</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-135"><a href="#cb28-135"></a><span class="fu">cat</span>(<span class="st">"1. Player Points (Pts_1, Pts_2): A higher Pts_1 estimate should positively impact P1's chances.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-136"><a href="#cb28-136"></a><span class="fu">cat</span>(<span class="st">"2. Context: The coefficients for Surface, Round, Series, and Court show which specific match conditions favor P1.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-137"><a href="#cb28-137"></a><span class="fu">cat</span>(<span class="st">"Variables with positive coefficients increase the probability of Player 1 winning.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-138"><a href="#cb28-138"></a><span class="fu">cat</span>(<span class="st">"Variables not listed here were shrunk to zero by the LASSO penalty (lambda = "</span>, lambda_best, <span class="st">").</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb28-139"><a href="#cb28-139"></a><span class="in">```</span></span>
+<span id="cb28-140"><a href="#cb28-140"></a></span>
+<span id="cb28-141"><a href="#cb28-141"></a><span class="at">&gt;This is a dataset that all of the ATP Dataset. This provides a lot of information about all of the matches from the past 25 years. We decided to ask the question of what are the most important factors in a player winning a set. Do certain players always preform better on a certain tennis surface, or part of a tournament. Is there one specific person that always loses to one player more than normal. I have decided to use machine learning to help me evaluate this database. I used a lasso model, which will tell us the most important variables in finding whether there is a win or not. I decided to just focus on one player Rafael Nadal, because I think that it is a lot more readable. But One of the major takeaways that I have gained from this data analysis is that there is not a lot of an impact of the type of court or surface, but there is a bit of a correlation between the series. It appears Nadal preforms better in the international series compared to the Grand Slam Series. But I also see that this estimate is still too low to be able to draw meaningful conclusions from this analysis.</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
