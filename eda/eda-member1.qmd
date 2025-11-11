@@ -1,5 +1,135 @@
 ---
-title: "Member 1 First Name & Last Name Initial"
+title: "Member 1 DK"
 ---
 
 Your exploratory data analysis of the team datasets go here.
+```{r}
+library(readr)
+atp_tennis_raw <- read_csv("../data/processed/atp_tennis.csv")
+```
+
+```{r}
+library("tidyverse")
+library("tidymodels")
+
+
+
+# 1. DATA PREPARATION, FEATURE ENGINEERING, AND MODEL SPECIFICATION (CONSOLIDATED)
+# Goal: Create the outcome and select non-obvious features (Points and Context)
+atp_tennis <- atp_tennis_raw %>%
+  # Filter step added to include ONLY matches where Nadal R. is playing
+  filter(Player_1 == "Nadal R." | Player_2 == "Nadal R.") %>%
+  mutate(
+    P1_Wins = ifelse(Winner == Player_1, "Yes", "No") %>% factor(levels = c("Yes", "No"))
+  ) %>%
+  # Filter out matches where we don't have basic data (using Pts_1 as a proxy)
+  filter(Pts_1 != -1) %>%
+  drop_na() %>%
+  # Select ONLY the non-obvious features as requested (Points and Context)
+  select(
+    P1_Wins,
+    Surface, Round, Series, Court
+  )
+
+# Define the LASSO model specification
+# We use tune() to signal that the optimal penalty must be found later.
+lasso_spec <- logistic_reg() %>% 
+  set_mode("classification") %>% 
+  set_engine("glmnet") %>% 
+  set_args(mixture = 1, penalty = tune())
+
+
+# 2. RECIPE, WORKFLOW, TUNING GRID (CONSOLIDATED)
+# Define the preprocessing steps
+# NOTE: step_normalize is ESSENTIAL for LASSO
+variable_recipe <- recipe(P1_Wins ~ ., data = atp_tennis) %>% 
+  step_normalize(all_numeric_predictors()) %>%
+  step_dummy(all_nominal_predictors())
+
+# Combine model and recipe into a workflow
+lasso_workflow <- workflow() %>% 
+  add_recipe(variable_recipe) %>% 
+  add_model(lasso_spec)
+
+# Set up tuning parameters: 20-fold CV and a grid of 20 penalty values
+set.seed(253)
+# NOTE: With a smaller, specialized dataset, you might want fewer folds or repeats.
+# We will keep v=20 for consistency but be aware it's taxing on small datasets.
+cv_folds <- vfold_cv(atp_tennis, v = 10, strata = P1_Wins)
+lasso_grid <- grid_regular(penalty(range = c(-5, 0)), levels = 10) 
+
+# 3. CROSS-VALIDATION AND SELECTION (CONSOLIDATED)
+# Run the tuning process
+lasso_models <- lasso_workflow %>% 
+  tune_grid(
+    grid = lasso_grid,
+    resamples = cv_folds,
+    metrics = metric_set(roc_auc) 
+  )
+
+# Select the best penalty and finalize
+best_penalty <- lasso_models %>%
+  select_best(metric = "roc_auc")
+
+final_lasso_workflow <- lasso_workflow %>%
+  finalize_workflow(best_penalty)
+
+# Output Results
+cat("\n\n--- Tuning Complete ---\n")
+cat("The optimal penalty parameter (lambda) that maximizes the ROC AUC is:\n")
+print(best_penalty)
+cat("\n\n--- Final Workflow Ready ---\n")
+```
+
+```{r}
+library("tidyverse")
+library("tidymodels")
+# Load required library for broom's tidy() on glmnet models
+library("glmnet") 
+
+# --- ASSUMPTION ---
+# This script assumes that 'atp_tennis' data, 'lasso_workflow', and 'best_penalty'
+# have been successfully created by the 'lasso_tuning.R' script.
+
+# --- 1. Finalize Workflow with the Best Penalty ---
+# This replaces 'penalty = tune()' with the optimal value found during tuning.
+final_lasso_workflow <- lasso_workflow %>%
+  finalize_workflow(best_penalty)
+
+cat("\n\n--- Fitting Final Model ---\n")
+
+# --- 2. Fit the Final Model to the Entire Dataset ---
+# This step trains the optimized LASSO model on the full preprocessed data.
+# NOTE: This model relies ONLY on Player Points (Pts_1, Pts_2) and Match Context.
+final_fit <- fit(final_lasso_workflow, data = atp_tennis)
+
+# --- 3. Inspect Model Coefficients ---
+# Use 'extract_fit_engine' to get the underlying glmnet object, 
+# and 'tidy' to see the coefficients at the chosen penalty level.
+
+# 3a. Extract the underlying glmnet fit
+glmnet_fit <- final_fit %>%
+  extract_fit_engine()
+
+# 3b. Extract the specific penalty value
+lambda_best <- best_penalty$penalty
+
+# 3c. Print the model coefficients for the optimal lambda
+# The tidy function shows which variables were kept and which were shrunk to 0.
+model_coefficients <- tidy(glmnet_fit, s = lambda_best) %>%
+  # Filter out coefficients that were set exactly to zero by the LASSO penalty
+  filter(estimate != 0) %>%
+  arrange(desc(abs(estimate)))
+
+cat("\n\n--- Key Model Coefficients (Excluding Zeroed Variables) ---\n")
+print(model_coefficients)
+
+cat("\n\n--- Model Interpretation Notes ---\n")
+cat("This model ignores Rank and Odds. Interpretation now centers on:\n")
+cat("1. Player Points (Pts_1, Pts_2): A higher Pts_1 estimate should positively impact P1's chances.\n")
+cat("2. Context: The coefficients for Surface, Round, Series, and Court show which specific match conditions favor P1.\n")
+cat("Variables with positive coefficients increase the probability of Player 1 winning.\n")
+cat("Variables not listed here were shrunk to zero by the LASSO penalty (lambda = ", lambda_best, ").\n")
+```
+
+>This is a dataset that all of the ATP Dataset. This provides a lot of information about all of the matches from the past 25 years. We decided to ask the question of what are the most important factors in a player winning a set. Do certain players always preform better on a certain tennis surface, or part of a tournament. Is there one specific person that always loses to one player more than normal. I have decided to use machine learning to help me evaluate this database. I used a lasso model, which will tell us the most important variables in finding whether there is a win or not. I decided to just focus on one player Rafael Nadal, because I think that it is a lot more readable. But One of the major takeaways that I have gained from this data analysis is that there is not a lot of an impact of the type of court or surface, but there is a bit of a correlation between the series. It appears Nadal preforms better in the international series compared to the Grand Slam Series. But I also see that this estimate is still too low to be able to draw meaningful conclusions from this analysis.

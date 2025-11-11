@@ -8,9 +8,7 @@ install.packages("DataExplorer")
 ```
 ```{r}
 library(readr)
-atp_tennis <- read_csv("../project/atp_tennis.csv")
-```
-```{r}
+atp_tennis <- read_csv("../data/processed/atp_tennis.csv")
 library(DataExplorer)
 create_report(atp_tennis)
 ```
