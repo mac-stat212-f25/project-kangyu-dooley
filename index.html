@@ -399,11 +399,6 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wa/wa-member1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Member 1 First Name &amp; Last Name Initial</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./Video.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Presentation</span></a>
   </div>
 </li>
@@ -454,7 +449,10 @@ cookieconsent.run({
 </header>
 
 
-<p>Your report goes here.</p>
+<p>This story traces the evolution of professional tennis through a massive dataset spanning from 2000 to 2025. It’s a project born from a simple curiosity: In a sport where individual grit and talent take center stage, can we find a mathematical pattern that predicts who will walk off the court a winner? By analyzing over 66,000 professional matches, we aren’t just looking at scores. We are witnessing the history of the game, from the diverse surfaces of the early 2000s to the fast-paced world of modern tennis. To tell this story, we first had to understand the court surface. Our data shows that while tennis is played across the world, the Hard court is the true king of the modern era, hosting over 36,000 matches in our dataset, which is nearly double that of the traditional Clay courts. We also saw that the backbone of the professional tour is the ATP250 series, which provides the foundation for players to climb the rankings. These rankings are more than just numbers, they represent a player’s standing in the tennis world, where higher points lead to higher rankings and the status of being a “Favorite” in the eyes of bookmakers. For our mathematical judge, we chose a Logistic Regression model. It essentially looks at the difference in rank between two players and calculates the probability of success. It raises a simple question: “If the higher-ranked player is this much better than their opponent on paper, how likely are they to win in reality?” This binary approach allows us to see how much weight the tour’s ranking system actually carries when the match starts. After testing our model on over 7,600 recent matches, we found that the results were both impressive and concerning. Our model predicted the winner correctly 64.14% of the time. This tells us that rankings are a powerful predictor, but they aren’t strong enough. Even though our model was right for most of the time, trying to beat the bookmaker through betting resulted in a negative return on investment. This serves as a great lesson: while data can give us a clear edge and help us understand the patterns of greatness, there is still an element of unpredictability that no algorithm can fully capture.</p>
+<p>Ultimately, our analysis distilled the chaos of 66,000 matches down to a singular, surprising truth: Rank and Betting Odds are the only metrics that consistently matter. This finding challenges the conventional wisdom of the sport. While we expected external factors like court surface, tournament prestige, or the specific match round to weigh heavily on the outcome, the data suggests otherwise. This absence of ‘noise’ is significant—it validates the ATP ranking system as a robust, distinct measure of skill that transcends the specific conditions of play. However, the data leaves us with a final, humbling takeaway. While variables like Rank and Odds give us a statistical edge, they cannot capture the human element. We can predict the probable winner, but the margin of error—that unpredictable 36%—is where the real game of tennis is played.</p>
+<p>To answer our central research question regarding the primary drivers of victory, our analysis identified Rank and Betting Odds as the indisputable “biggest factors,” rendering variables like court surface and tournament prestige statistically insignificant. This outcome was surprisingly contrarian, as it suggests that a player’s established skill level (Rank) transcends the specific conditions of play (Surface), validating the ATP point system as a highly efficient measure of talent. While these two metrics allowed our model to predict winners with 64.14% accuracy, the inability to capture the remaining 36% of outcomes underscores a critical limitation: data can effectively quantify the “on-paper” advantage, but it cannot account for the intangible human elements—grit, momentum, and luck—that make the sport unpredictable and ultimately decide the upsets.</p>
+<p>Future iterations of this project would benefit from a broader scope, particularly by incorporating data from the women’s tour. A comparative analysis between the men’s and women’s games could highlight whether factors like the Williams sisters’ dominance alter the model’s accuracy. Furthermore, introducing a geospatial variable to analyze performance by continent could uncover regional trends that were absent in this initial study.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -948,11 +946,33 @@ cookieconsent.run({
 <span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> "Report"</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="co">---</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a>Your report goes here.</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
 <span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="in">```{r}</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="co"># a test code chunk</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="in">```</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a>This story traces the evolution of professional tennis through a massive dataset spanning from 2000 to 2025. It’s a project born from a simple curiosity: In a sport where individual grit and talent take center stage, can we find a mathematical pattern that predicts who will walk off the court a winner? By analyzing over 66,000 professional matches, we aren't just looking at scores. We are witnessing the history of the game, from the diverse surfaces of the early 2000s to the fast-paced world of modern tennis. </span>
+<span id="cb2-18"><a href="#cb2-18"></a>To tell this story, we first had to understand the court surface. Our data shows that while tennis is played across the world, the Hard court is the true king of the modern era, hosting over 36,000 matches in our dataset, which is nearly double that of the traditional Clay courts. We also saw that the backbone of the professional tour is the ATP250 series, which provides the foundation for players to climb the rankings. These rankings are more than just numbers, they represent a player’s standing in the tennis world, where higher points lead to higher rankings and the status of being a "Favorite" in the eyes of bookmakers.</span>
+<span id="cb2-19"><a href="#cb2-19"></a>For our mathematical judge, we chose a Logistic Regression model. It essentially looks at the difference in rank between two players and calculates the probability of success. It raises a simple question: "If the higher-ranked player is this much better than their opponent on paper, how likely are they to win in reality?" This binary approach allows us to see how much weight the tour’s ranking system actually carries when the match starts.</span>
+<span id="cb2-20"><a href="#cb2-20"></a>After testing our model on over 7,600 recent matches, we found that the results were both impressive and concerning. Our model predicted the winner correctly 64.14% of the time. This tells us that rankings are a powerful predictor, but they aren't strong enough. Even though our model was right for most of the time, trying to beat the bookmaker through betting resulted in a negative return on investment. This serves as a great lesson: while data can give us a clear edge and help us understand the patterns of greatness, there is still an element of unpredictability that no algorithm can fully capture. </span>
+<span id="cb2-21"><a href="#cb2-21"></a></span>
+<span id="cb2-22"><a href="#cb2-22"></a>Ultimately, our analysis distilled the chaos of 66,000 matches down to a singular, surprising truth: Rank and Betting Odds are the only metrics that consistently matter. This finding challenges the conventional wisdom of the sport. While we expected external factors like court surface, tournament prestige, or the specific match round to weigh heavily on the outcome, the data suggests otherwise. This absence of 'noise' is significant—it validates the ATP ranking system as a robust, distinct measure of skill that transcends the specific conditions of play. However, the data leaves us with a final, humbling takeaway. While variables like Rank and Odds give us a statistical edge, they cannot capture the human element. We can predict the probable winner, but the margin of error—that unpredictable 36%—is where the real game of tennis is played.</span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a>To answer our central research question regarding the primary drivers of victory, our analysis identified Rank and Betting Odds as the indisputable "biggest factors," rendering variables like court surface and tournament prestige statistically insignificant. This outcome was surprisingly contrarian, as it suggests that a player's established skill level (Rank) transcends the specific conditions of play (Surface), validating the ATP point system as a highly efficient measure of talent. While these two metrics allowed our model to predict winners with 64.14% accuracy, the inability to capture the remaining 36% of outcomes underscores a critical limitation: data can effectively quantify the "on-paper" advantage, but it cannot account for the intangible human elements—grit, momentum, and luck—that make the sport unpredictable and ultimately decide the upsets.</span>
+<span id="cb2-25"><a href="#cb2-25"></a></span>
+<span id="cb2-26"><a href="#cb2-26"></a>Future iterations of this project would benefit from a broader scope, particularly by incorporating data from the women's tour. A comparative analysis between the men's and women's games could highlight whether factors like the Williams sisters' dominance alter the model's accuracy. Furthermore, introducing a geospatial variable to analyze performance by continent could uncover regional trends that were absent in this initial study.</span>
+<span id="cb2-27"><a href="#cb2-27"></a></span>
+<span id="cb2-28"><a href="#cb2-28"></a></span>
+<span id="cb2-31"><a href="#cb2-31"></a><span class="in">```{r}</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="co"># a test code chunk</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
